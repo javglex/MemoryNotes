@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="@dimen/layout_height"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -38,14 +39,27 @@
 
         <TextView
             android:id="@+id/date"
-            android:layout_width="match_parent"
+            style="@style/Detail"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:maxLines="1"
             android:ellipsize="end"
+            android:maxLines="1"
             android:text="Last Updated"
             app:layout_constraintBottom_toBottomOf="parent"
-            style="@style/Detail">
+            app:layout_constraintStart_toStartOf="parent"></TextView>
+
+        <TextView
+            android:id="@+id/word_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Words: "
+            style="@style/Detail"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            >
+
         </TextView>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>
